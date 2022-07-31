@@ -13,7 +13,7 @@ function App() {
       const res = await axios.get(`http://localhost:5000?q=${query}`);
       setData(res.data);
     }
-    fetchUsers();
+    if(query.length === 0 || query.length > 2) fetchUsers();
   },[query])
 
   return (
