@@ -4,7 +4,7 @@ import { Users } from './users'
 
 function App() {
   const [query, setQuery] = useState("");
-  console.log(query);
+  console.log(Users.filter(user=> user.first_name.toLowerCase().includes("fe")));
   return (
     <div className="app">
       <input
