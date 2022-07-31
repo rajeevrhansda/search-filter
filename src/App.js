@@ -1,4 +1,5 @@
 import './App.css';
+import { Users } from './users'
 
 function App() {
   return (
@@ -8,11 +9,11 @@ function App() {
         placeholder="Search..."
         type="text"
       />
-    <ul class="list">
-      <li class="listItem">John</li>
-      <li class="listItem">Jane</li>
-      <li class="listItem">Mike</li>
-    </ul>
+      <ul class="list">
+        {Users.map((user) => (
+          <li key={user.id} class="listItem">{user.first_name}</li>
+        ))}
+      </ul>
     </div>
   );
 }
